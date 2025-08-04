@@ -17,15 +17,12 @@ Dataset: Kaggle E-Commerce (285M rows)
 To start Hadoop, run:
 
 ```bash
-### 2. Starting Hadoop Services
-To start Hadoop, run:
-
-```bash
 stop-yarn.sh
 stop-dfs.sh
 start-dfs.sh
 start-yarn.sh
 
-<img width="1149" height="340" alt="start-hadoop-services-jps png " src="https://github.com/user-attachments/assets/d173917e-d733-4cad-b714-ea7768523fad" />
+<img width="1149" height="340" alt="start-hadoop-services-jps png " src="https://github.com/user-attachments/assets/16e98f26-47d0-4425-9ec0-79d660a52d05" />
+
 
 
