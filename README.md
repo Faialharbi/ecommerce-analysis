@@ -18,10 +18,10 @@ To start Hadoop, run:
 
 ```bash
 stop-yarn.sh
-stop-dfs.sh
+sto![Uploading start-hadoop-services-jps.png .png…]()
+p-dfs.sh
 start-dfs.sh
 start-yarn.sh
 
 
-**Screenshot:**
-![Hadoop Services Running](start-hadoop-services-jps.png)
+
