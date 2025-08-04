@@ -66,12 +66,14 @@ pyspark --master yarn
 ```
 
 Load the dataset from HDFS:
+```bash
 
 df = spark.read.csv("hdfs:///user/fai/ecommerce/raw/2019-Nov.csv", header=True, inferSchema=True)
 df.createOrReplaceTempView("ecommerce")
-
+```
 
 Run a SQL query to analyze orders by brand:
+```bash
 
 spark.sql("""
     SELECT brand, COUNT(*) as total_orders
@@ -79,7 +81,7 @@ spark.sql("""
     GROUP BY brand
     ORDER BY total_orders DESC
 """).show()
-
+```
 
 ![Spark Analysis - Brands](images/spark-analysis-brands.png)
 
