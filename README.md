@@ -22,3 +22,14 @@ stop-dfs.sh
 start-dfs.sh
 start-yarn.sh
 
+
+✔ **Important:** The image link (`start-hadoop-services-jps.png`) should be outside the code block.  
+✔ Make sure the image file is in the same directory as `README.md`.
+
+---
+
+✅ Now your image will appear properly under the text when viewed on GitHub.
+
+---
+
+🔥 Do you want me to prepare the **FULL README file (English, with placeholders for all images)** so you can just paste it and upload your screenshots?
