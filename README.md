@@ -22,7 +22,5 @@ start-dfs.sh
 start-yarn.sh
 ### 2. Starting Hadoop Services
 After starting Hadoop services, verify using `jps`:
-
-```bash
-jps
+![Hadoop Services Running](start-hadoop-services-jps.png)
 
