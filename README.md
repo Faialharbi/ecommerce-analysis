@@ -25,10 +25,13 @@ This project demonstrates the setup of **Hadoop & Spark** on a local machine, lo
 ---
 
 ### 2. Starting Hadoop Services
-To start Hadoop services, run:
+To start Hadoop, run:
 
 ```bash
 stop-yarn.sh
 stop-dfs.sh
 start-dfs.sh
 start-yarn.sh
+```
+
+
