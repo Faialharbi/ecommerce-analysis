@@ -85,3 +85,22 @@ spark.sql("""
 
 ![Spark Analysis - Brands](images/spark-analysis-brands.png)
 
+
+
+### 5. Optimization
+
+To improve Spark performance:
+
+```python
+# Repartition data for better parallelism
+df = df.repartition(10)
+
+print(df.rdd.getNumPartitions())
+
+# Cache dataframe if used multiple times
+df.cache()
+
+# Check query plan
+spark.sql("SELECT brand, COUNT(*) FROM ecommerce GROUP BY brand").explain()
+```
+
