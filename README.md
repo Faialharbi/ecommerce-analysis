@@ -104,3 +104,4 @@ df.cache()
 spark.sql("SELECT brand, COUNT(*) FROM ecommerce GROUP BY brand").explain()
 ```
 
+![Spark Optimization and Execution Plan](images/spark-optimization-explain.png)
