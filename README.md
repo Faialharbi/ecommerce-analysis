@@ -35,5 +35,5 @@ start-yarn.sh
 ```
 
 
-```markdown
+markdown
 ![Hadoop Services Running](images/start-hadoop-services-jps.png)
