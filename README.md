@@ -13,14 +13,12 @@ Dataset: Kaggle E-Commerce (285M rows)
 - Hadoop 3.x
 - Spark 3.x
 - Python 3.x + PySpark
-- ### 2. Starting Hadoop Services
+### 2. Starting Hadoop Services
 To start Hadoop, run:
+
 ```bash
 stop-yarn.sh
 stop-dfs.sh
 start-dfs.sh
 start-yarn.sh
-### 2. Starting Hadoop Services
-After starting Hadoop services, verify using `jps`:
-![Hadoop Services Running](start-hadoop-services-jps.png)
 
