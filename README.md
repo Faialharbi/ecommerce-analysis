@@ -55,3 +55,31 @@ hdfs dfs -ls /user/fai/ecommerce/raw
 
 ![HDFS Upload](images/hdfs-upload.png)
 
+
+### 4. Analyze Data with Spark
+
+Start a PySpark session connected to YARN:
+
+```bash
+pyspark --master yarn
+
+```
+
+Load the dataset from HDFS:
+
+df = spark.read.csv("hdfs:///user/fai/ecommerce/raw/2019-Nov.csv", header=True, inferSchema=True)
+df.createOrReplaceTempView("ecommerce")
+
+
+Run a SQL query to analyze orders by brand:
+
+spark.sql("""
+    SELECT brand, COUNT(*) as total_orders
+    FROM ecommerce
+    GROUP BY brand
+    ORDER BY total_orders DESC
+""").show()
+
+
+![Spark Analysis - Brands](images/spark-analysis-brands.png)
+
