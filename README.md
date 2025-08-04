@@ -36,3 +36,22 @@ start-yarn.sh
 
 
 ![Hadoop Services Running](images/start-hadoop-services-jps.png)
+
+
+
+### 3. Upload Dataset to HDFS
+After extracting the Kaggle dataset, upload it to HDFS:
+
+```bash
+# Create directory in HDFS
+hdfs dfs -mkdir -p /user/fai/ecommerce/raw
+
+# Upload dataset
+hdfs dfs -put data/raw/2019-Nov.csv /user/fai/ecommerce/raw/
+
+# Verify upload
+hdfs dfs -ls /user/fai/ecommerce/raw
+```
+
+![HDFS Upload](images/hdfs-upload.png)
+
