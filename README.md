@@ -21,3 +21,7 @@ stop-yarn.sh
 stop-dfs.sh
 start-dfs.sh
 start-yarn.sh
+
+
+**Screenshot:**
+![Hadoop Services Running](start-hadoop-services-jps.png)
