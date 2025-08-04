@@ -105,3 +105,52 @@ spark.sql("SELECT brand, COUNT(*) FROM ecommerce GROUP BY brand").explain()
 ```
 
 ![Spark Optimization and Execution Plan](images/spark-optimization-explain.png)
+
+
+
+### 6. Additional Spark Data Analysis
+
+Here are some key analysis functions to gain insights from the data using PySpark SQL:
+
+```python
+# 1. Top N brands by order count
+def top_brands(n=10):
+    query = f"""
+    SELECT brand, COUNT(*) AS total_orders
+    FROM ecommerce
+    GROUP BY brand
+    ORDER BY total_orders DESC
+    LIMIT {n}
+    """
+    return spark.sql(query).show()
+
+top_brands()
+
+# 2. Top N categories by order count
+def top_categories(n=10):
+    query = f"""
+    SELECT category_code, COUNT(*) AS total_orders
+    FROM ecommerce
+    GROUP BY category_code
+    ORDER BY total_orders DESC
+    LIMIT {n}
+    """
+    return spark.sql(query).show()
+
+top_categories(5)
+
+# 3. Event type distribution
+def event_distribution():
+    query = """
+    SELECT event_type, COUNT(*) AS event_count
+    FROM ecommerce
+    GROUP BY event_type
+    ORDER BY event_count DESC
+    """
+    return spark.sql(query).show()
+
+event_distribution()
+
+```
+
+![Spark Advanced Analysis](images/spark-advanced-analysis.png)
