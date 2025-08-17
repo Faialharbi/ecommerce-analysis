@@ -47,7 +47,7 @@ After extracting the Kaggle dataset, upload it to HDFS:
 hdfs dfs -mkdir -p /user/fai/ecommerce/raw
 
 # Upload dataset
-hdfs dfs -put data/raw/2019-Nov.csv /user/fai/ecommerce/raw/
+hdfs dfs -put /Users/fai/Downloads/ecommerce_data/2019-Nov.csv /user/fai/ecommerce/raw/
 
 # Verify upload
 hdfs dfs -ls /user/fai/ecommerce/raw
